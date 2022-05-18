@@ -1,3 +1,4 @@
+![Screenshot from 2022-05-18 15-08-53](https://user-images.githubusercontent.com/37938084/169164647-79701681-dae6-495b-b4a4-f5f320f7835e.png)
 # dynamic-colorprompt
 Color bash prompt that changes colors with hostname and privileges
 
