@@ -1,0 +1,9 @@
+hostsum=$(hostname | md5sum | cut -c 31-32)
+color=$(echo "ibase=16; ${hostsum^^}" | bc)
+
+if [ "$(whoami)" == "root" ]
+then
+   export PS1='\[\e[0m\]┌──[\[\e[0;91m\]\u\[\e[0m\]@\[\e[38;5;${color}m\]\h\[\e[0m\]] \[\e[0m\]\w\n\[\e[0m\]└─\[\e[0m\]\$ \[\e[0m\]'
+else
+   export PS1='\[\e[0m\]┌──[\[\e[0;34m\]\u\[\e[0m\]@\[\e[38;5;${color}m\]\h\[\e[0m\]] \[\e[0m\]\w\n\[\e[0m\]└─\[\e[0m\]\$ \[\e[0m\]'
+fi
